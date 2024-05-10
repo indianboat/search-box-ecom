@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { SearchIcon } from '../svgs/SvgIcons'
 import SearchAutocompleteBox from '../searchAutocompleteBox/SearchAutocompleteBox';
+import { useNavigate } from "react-router-dom";
 
 const SearchBar = () => {
 
@@ -8,8 +9,21 @@ const SearchBar = () => {
   const [isAutocompleteOpen, setIsAutocompleteOpen] = useState<boolean>(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const autocompleteRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
+
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        autocompleteRef.current &&
+        !autocompleteRef.current.contains(event.target as Node) &&
+        inputRef.current &&
+        !inputRef.current.contains(event.target as Node)
+      ) {
+        setIsAutocompleteOpen(false);
+      }
+    };
+
     document.body.addEventListener('mousedown', handleClickOutside);
 
     return () => {
@@ -25,21 +39,15 @@ const SearchBar = () => {
     setIsAutocompleteOpen(true);
   }
 
-  const handleClickOutside = (event: MouseEvent) => {
-    if (
-      autocompleteRef.current &&
-      !autocompleteRef.current.contains(event.target as Node) &&
-      inputRef.current &&
-      !inputRef.current.contains(event.target as Node)
-    ) {
-      setIsAutocompleteOpen(false);
-    }
-  };
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    navigate(`/search?query=${searchQuery}`)
+  }
 
   return (
     <>
       <div className="main-container">
-        <div className="search-bar">
+        <form className="search-bar" onSubmit={handleSubmit}>
           <input
             ref={inputRef}
             type="text"
@@ -49,14 +57,14 @@ const SearchBar = () => {
             onChange={handleSearchQuery}
             onFocus={handleInputFocus}
           />
-          <button className='search-btn'>
+          <button type="submit" className='search-btn'>
             <SearchIcon />
           </button>
 
           <div ref={autocompleteRef}>
             <SearchAutocompleteBox isOpen={isAutocompleteOpen} />
           </div>
-        </div>
+        </form>
       </div>
     </>
   )
