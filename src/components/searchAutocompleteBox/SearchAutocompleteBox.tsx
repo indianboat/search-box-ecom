@@ -4,6 +4,7 @@ import Image2 from "../../assets/autocomplete-images/img2.jpeg";
 import Image3 from "../../assets/autocomplete-images/img3.jpeg";
 import Image4 from "../../assets/autocomplete-images/img4.jpeg";
 import Image5 from "../../assets/autocomplete-images/img5.jpeg";
+import { Link } from "react-router-dom";
 
 interface AutocompleteTypes {
   isOpen: boolean
@@ -25,41 +26,41 @@ const SearchAutocompleteBox = ({ isOpen }: AutocompleteTypes) => {
               <h4>Latest Trends</h4>
               <div className="images-container">
 
-                <a href="/search" className="">
+                <Link to="/search" className="">
                   <img src={Image1} className="autocomplete-images" alt="fashion-image" />
                   <p>Shirt with puffed sleeves</p>
-                </a>
+                </Link>
 
-                <a href="/search" className="">
+                <Link to="/search" className="">
                   <img src={Image2} className="autocomplete-images" alt="fashion-image" />
                   <p>Linen jumpsuit</p>
-                </a>
+                </Link>
 
-                <a href="/search" className="">
+                <Link to="/search" className="">
                   <img src={Image3} className="autocomplete-images" alt="fashion-image" />
                   <p>White formal suit</p>
-                </a>
+                </Link>
 
-                <a href="/search" className="">
+                <Link to="/search" className="">
                   <img src={Image4} className="autocomplete-images" alt="fashion-image" />
                   <p>Patterns dresses</p>
-                </a>
+                </Link>
 
-                <a href="/search" className="">
+                <Link to="/search" className="">
                   <img src={Image5} className="autocomplete-images" alt="fashion-image" />
                   <p>Leather shirt dress</p>
-                </a>
+                </Link>
 
               </div>
 
               <div className="popular-suggestion-container" style={{ paddingBottom: "20px" }}>
                 <h3>Popular suggestions</h3>
                 <ul>
-                  <li><a href="/search">Striped shirt dress</a></li>
-                  <li><a href="/search">Satin shirts</a></li>
-                  <li><a href="/search">Denim jumpsuit</a></li>
-                  <li><a href="/search">Leather dresses</a></li>
-                  <li><a href="/search">Solid tshirts</a></li>
+                  <li><Link to="/search">Striped shirt dress</Link></li>
+                  <li><Link to="/search">Satin shirts</Link></li>
+                  <li><Link to="/search">Denim jumpsuit</Link></li>
+                  <li><Link to="/search">Leather dresses</Link></li>
+                  <li><Link to="/search">Solid tshirts</Link></li>
                 </ul>
               </div>
             </div>

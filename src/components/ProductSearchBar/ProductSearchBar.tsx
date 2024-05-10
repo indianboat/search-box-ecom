@@ -4,6 +4,7 @@ import { Filter, RatingFilter } from "../Filter/Filter";
 import { SearchIcon } from "../svgs/SvgIcons";
 import { ProductData } from "../../types/productData";
 import ProductCard from "../ProductsList/ProductCard";
+import { Link } from "react-router-dom";
 
 const ProductSearchBar = () => {
 
@@ -112,7 +113,7 @@ const ProductSearchBar = () => {
     <>
       <div className="" style={{ margin: "0 auto", width: "100%" }}>
         <div className="">
-          <a href="/">Home</a>
+          <Link to="/">Home</Link>
         </div>
         <div className="product-container">
           <input type="text" placeholder="Search" className="product-search-input" value={searchInput} onChange={handleSearchInputChange} />
