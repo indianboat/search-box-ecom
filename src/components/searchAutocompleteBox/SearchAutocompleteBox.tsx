@@ -55,11 +55,11 @@ const SearchAutocompleteBox = ({ isOpen }: AutocompleteTypes) => {
               <div className="popular-suggestion-container" style={{paddingBottom:"20px"}}>
                 <h3>Popular suggestions</h3>
                 <ul>
-                  <li><a href="/">Striped shirt dress</a></li>
-                  <li><a href="/">Satin shirts</a></li>
-                  <li><a href="/">Denim jumpsuit</a></li>
-                  <li><a href="/">Leather dresses</a></li>
-                  <li><a href="/">Solid tshirts</a></li>
+                  <li><a href="/search?query=hello">Striped shirt dress</a></li>
+                  <li><a href="/search?query=hello">Satin shirts</a></li>
+                  <li><a href="/search?query=hello">Denim jumpsuit</a></li>
+                  <li><a href="/search?query=hello">Leather dresses</a></li>
+                  <li><a href="/search?query=hello">Solid tshirts</a></li>
                 </ul>
               </div>
             </div>
