@@ -5,5 +5,6 @@ export type ProductData = {
   rating: {
     rate: number,
     count: number
-  }
+  },
+  category: string
 }

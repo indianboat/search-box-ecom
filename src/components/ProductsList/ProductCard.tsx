@@ -27,7 +27,7 @@ const ProductCard = ({ data }: ProductCardProps) => {
           Rs.{data.price}
         </p>
         <div className="user-ratings">
-          <ProductRating value={data.rating.rate} />
+          <ProductRating value={data.rating.rate}  />
           <span>({data.rating.count})</span>
         </div>
 
