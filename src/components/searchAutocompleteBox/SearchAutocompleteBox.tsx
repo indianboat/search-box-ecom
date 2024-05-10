@@ -25,41 +25,41 @@ const SearchAutocompleteBox = ({ isOpen }: AutocompleteTypes) => {
               <h4>Latest Trends</h4>
               <div className="images-container">
 
-                <a href="/" className="">
+                <a href="/search" className="">
                   <img src={Image1} className="autocomplete-images" alt="fashion-image" />
                   <p>Shirt with puffed sleeves</p>
                 </a>
 
-                <a href="/" className="">
+                <a href="/search" className="">
                   <img src={Image2} className="autocomplete-images" alt="fashion-image" />
                   <p>Linen jumpsuit</p>
                 </a>
 
-                <a href="/" className="">
+                <a href="/search" className="">
                   <img src={Image3} className="autocomplete-images" alt="fashion-image" />
                   <p>White formal suit</p>
                 </a>
 
-                <a href="/" className="">
+                <a href="/search" className="">
                   <img src={Image4} className="autocomplete-images" alt="fashion-image" />
                   <p>Patterns dresses</p>
                 </a>
 
-                <a href="/" className="">
+                <a href="/search" className="">
                   <img src={Image5} className="autocomplete-images" alt="fashion-image" />
                   <p>Leather shirt dress</p>
                 </a>
 
               </div>
 
-              <div className="popular-suggestion-container" style={{paddingBottom:"20px"}}>
+              <div className="popular-suggestion-container" style={{ paddingBottom: "20px" }}>
                 <h3>Popular suggestions</h3>
                 <ul>
-                  <li><a href="/search?query=hello">Striped shirt dress</a></li>
-                  <li><a href="/search?query=hello">Satin shirts</a></li>
-                  <li><a href="/search?query=hello">Denim jumpsuit</a></li>
-                  <li><a href="/search?query=hello">Leather dresses</a></li>
-                  <li><a href="/search?query=hello">Solid tshirts</a></li>
+                  <li><a href="/search">Striped shirt dress</a></li>
+                  <li><a href="/search">Satin shirts</a></li>
+                  <li><a href="/search">Denim jumpsuit</a></li>
+                  <li><a href="/search">Leather dresses</a></li>
+                  <li><a href="/search">Solid tshirts</a></li>
                 </ul>
               </div>
             </div>
